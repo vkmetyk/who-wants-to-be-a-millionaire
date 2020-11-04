@@ -6,13 +6,178 @@
       "hardLevel": 0,
       "list": [
         {
-          "title": "How old your elder brother was 10 years before you was born, mate?",
+          "title": "In the UK, the abbreviation NHS stands for National 'what' Service?",
+          "answerNumber": 1,
+          "answers": [
+            "Humanity",
+            "Health",
+            "Honour",
+            "Household"
+          ]
+        }
+      ]
+    },
+    {
+      "hardLevel": 1,
+      "list": [
+        {
+          "title": "Which Disney character famously leaves a glass slipper behind at a royal ball?",
           "answerNumber": 2,
           "answers": [
-            "10 years",
-            "11 years",
-            "12 years",
-            "14 years"
+            "Pocahontas",
+            "Sleeping Beauty",
+            "Cinderella",
+            "Elsa"
+          ]
+        }
+      ]
+    },
+    {
+      "hardLevel": 2,
+      "list": [
+        {
+          "title": "What name is given to the revolving belt machinery in an airport that delivers checked luggage from the plane to baggage reclaim?",
+          "answerNumber": 3,
+          "answers": [
+            "Hangar",
+            "Terminal",
+            "Concourse",
+            "Carousel"
+          ]
+        }
+      ]
+    },
+    {
+      "hardLevel": 3,
+      "list": [
+        {
+          "title": "Which of these brands was chiefly associated with the manufacture of household locks?",
+          "answerNumber": 2,
+          "answers": [
+            "Phillips",
+            "Flymo",
+            "Chubb",
+            "Ronseal"
+          ]
+        }
+      ]
+    },
+    {
+      "hardLevel": 4,
+      "list": [
+        {
+          "title": "The hammer and sickle is one of the most recognisable symbols of which political ideology?",
+          "answerNumber": 1,
+          "answers": [
+            "Republicanism",
+            "Communism",
+            "Conservatism",
+            "Liberalism"
+          ]
+        }
+      ]
+    },
+    {
+      "hardLevel": 5,
+      "list": [
+        {
+          "title": "Which toys have been marketed with the phrase 'Robots in Disguise'?",
+          "answerNumber": 3,
+          "answers": [
+            "Bratz Dolls",
+            "Sylvanian Families",
+            "Hatchimals",
+            "Transformers"
+          ]
+        }
+      ]
+    },
+    {
+      "hardLevel": 6,
+      "list": [
+        {
+          "title": "What does the word 'loquacious' mean?",
+          "answerNumber": 1,
+          "answers": [
+            "Angry",
+            "Chatty",
+            "Beautiful",
+            "Shy"
+          ]
+        }
+      ]
+    },
+    {
+      "hardLevel": 7,
+      "list": [
+        {
+          "title": "Obstetrics is a branch of medicine particularly concerned with what?",
+          "answerNumber": 0,
+          "answers": [
+            "Childbirth",
+            "Broken bones",
+            "Heart conditions",
+            "Old age"
+          ]
+        }
+      ]
+    },
+    {
+      "hardLevel": 8,
+      "list": [
+        {
+          "title": "In 'Doctor Who', what was the signature look of the fourth Doctor, as portrayed by Tom Baker?",
+          "answerNumber": 1,
+          "answers": [
+            "Bow-tie, braces & tweed jacket",
+            "Wide-brimmed hat & extra long scarf",
+            "Pinstripe suit & trainers",
+            "Cape, velvet jacket & frilly shirt"
+          ]
+        }
+      ]
+    },
+    {
+      "hardLevel": 9,
+      "list": [
+        {
+          "title": "Where Donald used his only lifeline ) Which of these religious observances lasts for the shortest period of time during the calendar year?",
+          "answerNumber": 1,
+          "answers": [
+            "Ramadan",
+            "Diwali",
+            "Lent",
+            "Hanukkah"
+          ]
+        }
+      ]
+    },
+    {
+      "hardLevel": 10,
+      "list": [
+        {
+          "title": "At the closest point, which island group is only 50 miles south-east of the coast of Florida?",
+          "answerNumber": 0,
+          "answers": [
+            "Bahamas",
+            "US Virgin Islands",
+            "Turks and Caicos Islands",
+            "Bermuda"
+          ]
+        }
+      ]
+    },
+    {
+      "hardLevel": 11,
+      "list": [
+        {
+          "title": "Construction of which of these famous landmarks was completed first?",
+          "answerNumber": 3,
+          "answers": [
+            "Empire State Building",
+            "Royal Albert Hall",
+            "Eiffel Tower",
+            "'Big Ben' Clock Tower"
           ]
         }
       ]

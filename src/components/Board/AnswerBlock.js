@@ -1,24 +1,36 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import TextContainer from '../TextContainer';
 import setButtonView from '../../addition-functions/setButtonView';
 
 const AnswerBlock = ({ answers, correctAnswer, setAnswer }) => {
+  const [state, setState] = useState(true);
+
+  useEffect(() => {
+    setState(true);
+  }, [answers]);
+
   if (!answers)
     return null;
 
   const clickToggle = (event) => {
-    console.log(event.target.name);
-    setButtonView(event.target, correctAnswer === +event.target.name ? 'correct' : 'wrong');
-    setTimeout(() => {
-      if (setAnswer)
-        setAnswer(event.target.name);
-    }, 3000);
+    if (state) {
+      setState(false);
+
+      let answerId = +event.target.parentNode.querySelector('path').dataset.index;
+
+      setButtonView(event.target.parentNode, correctAnswer === answerId ? 'correct' : 'wrong');
+      setTimeout(() => {
+        event.target.parentNode.classList.remove(correctAnswer === answerId ? 'correct' : 'wrong')
+        if (setAnswer)
+          setAnswer(answerId);
+      }, 200);
+    }
   }
 
   return (
     <div className="answer-block">
       {answers.map((answer, index) =>
-        <TextContainer key={index} clickEvent={clickToggle} name={index}>
+        <TextContainer key={index} clickEvent={clickToggle} index={index}>
           <text className="answer-number" textAnchor="middle" x="50" y="45">
             {'' + String.fromCharCode(65 + index)}
           </text>
