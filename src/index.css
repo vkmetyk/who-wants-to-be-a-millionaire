@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+}
+
+.correct {
+  stroke: #47D867;
+  fill: #e6faea;
+}
+
+.wrong {
+  stroke: #ec6259;
+  fill: #fdeeed;
+}
+
+/*
+  Menu
+*/
+
+.menu {
+  background: linear-gradient(to bottom right, #fff 50%, #fff3eb 50%);
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 80px;
+  width: 100vw;
+  height: 100vh;
+}
+
+.menu__hand {
+  width: 100%;
+  height: auto;
+}
+
+.menu__logic {
+  align-self: center;
+  align-items: flex-start;
+  display: flex;
+  font-weight: 600;
+  flex-direction: column;
+  text-align: left;
+  width: 100%;
+  height: fit-content;
+}
+
+.menu__text {
+  margin-bottom: 50px;
+}
+
+.menu__button {
+  background: #ff8b37;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 15px 100px;
+}
+
+@media screen and (max-width: 600px) {
+  .menu {
+    grid-template-columns: 1fr;
+  }
+
+  .menu__hand {
+    align-self: end;
+  }
+
+  .menu__logic {
+    align-self: start;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/*
+  Game
+*/
+
+.game {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  width: 100vw;
+  height: 100vh;
+}
+
+.game__text-container {
+  user-select: none;
+}
+
+.game__text-container path {
+  stroke: #D0D0D8;
+}
+
+/*
+  Board
+*/
+
+.game__board {
+  background: #f5f5f7;
+  margin: 0;
+  /*padding: 0;*/
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50%;
+  padding: 80px 100px 80px 60px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.question-block {
+  width: 100%;
+}
+
+.question {
+  font-size: 2vw;
+  width: 100%;
+}
+
+.answer-block {
+  align-items: center;
+  align-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  justify-items: start;
+  grid-gap: 25px;
+  width: 100%;
+  height: 100%;
+}
+
+.answer-block .game__text-container {
+  width: 100%;
+}
+
+.answer-block .game__text-container:hover path {
+  stroke: #ff8b37;
+}
+
+.answer-block .game__text-container:active path {
+  stroke: #ff8b37;
+  fill: #fff3eb;
+}
+
+.answer-number {
+  color: #ff8b37;
+  fill: #ff8b37;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.answer-text {
+  font-size: 22px;
+  font-weight: 400;
+}
+
+/*
+  Score
+*/
+
+.game__score {
+  align-content: center;
+  background: #fff;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+  justify-content: space-around;
+  justify-items: center;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.game__score .game__text-container {
+  width: 80%;
+}
+
+.score-text {
+  font-size: 28px;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 1200px) {
+  .game {
+    grid-template-columns: 1fr 300px;
+  }
+  .game__board {
+    padding: 80px 40px;
+  }
+  .game__score .game__text-container {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .game {
+    grid-template-columns: 1fr;
+  }
+  .game__board {
+    padding: 0;
+  }
+  .game__score {
+    display: none;
+  }
+  .question-block {
+    align-items: center;
+    display: flex;
+    text-align: center;
+    /*height: 40%;*/
+  }
+  .question {
+    font-size: 26px;
+    margin: 10px;
+  }
+  .answer-block {
+    justify-items: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .answer-block {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .game {
+    grid-template-columns: 1fr;
+  }
+  .game__board {
+    grid-template-columns: 1fr;
+    grid-template-rows: 40% 60%;
+  }
+  .question {
+    font-size: 20px;
+  }
+  .answer-block {
+    align-content: flex-end;
+    padding: 10px;
+  }
+}
+

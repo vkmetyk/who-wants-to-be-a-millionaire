@@ -1,0 +1,21 @@
+{
+  "questionCount": 12,
+  "questionPrices": [1000000, 500000, 250000, 125000, 64000, 32000, 16000, 8000, 4000, 2000, 1000, 500],
+  "questions": [
+    {
+      "hardLevel": 0,
+      "list": [
+        {
+          "title": "How old your elder brother was 10 years before you was born, mate?",
+          "answerNumber": 2,
+          "answers": [
+            "10 years",
+            "11 years",
+            "12 years",
+            "14 years"
+          ]
+        }
+      ]
+    }
+  ]
+}
