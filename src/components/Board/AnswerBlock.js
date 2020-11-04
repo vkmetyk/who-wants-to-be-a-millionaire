@@ -23,7 +23,7 @@ const AnswerBlock = ({ answers, correctAnswer, setAnswer }) => {
         event.target.parentNode.classList.remove(correctAnswer === answerId ? 'correct' : 'wrong')
         if (setAnswer)
           setAnswer(answerId);
-      }, 200);
+      }, 500);
     }
   }
 

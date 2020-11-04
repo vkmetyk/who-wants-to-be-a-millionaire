@@ -1,15 +1,22 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import TextContainer from '../TextContainer';
 
 const Score = ({ prices, currentLevel }) => {
+  useEffect(() => {
+    document.querySelectorAll('.game__score > div')
+      .forEach(el => {
+        el.style.height = 100 / prices.length + '%';
+      })
+  }, [prices]);
+
   return (
     <div className="game__score">
       {prices.map((price, index, array) =>
         <div
           key={index}
           className={
-            (array.length - 1 - currentLevel < index && "past") ||
-            (array.length - 1 - currentLevel === index && "current") || ''
+            (currentLevel > index && "past") ||
+            (currentLevel === index && "current") || ''
           }
         >
           <TextContainer>

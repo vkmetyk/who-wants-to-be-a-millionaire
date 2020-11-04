@@ -5,7 +5,7 @@ import './index.css';
 import GameOver from './components/GameOver';
 
 function App() {
-  const [gameState, setGameState] = useState(1);
+  const [gameState, setGameState] = useState(2);
   const [score, setScore] = useState(500);
   const [data, setData] = useState(null);
 

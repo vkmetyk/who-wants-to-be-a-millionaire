@@ -5,7 +5,12 @@ import Score from './Score/Score';
 function getRandomQuestion(questions) {
   if (!questions)
     return null;
-  return questions[Math.floor(Math.random() * questions.length)];
+
+  let question = questions[Math.floor(Math.random() * questions.length)];
+  let answer = question.answers[question.answerNumber];
+  question.answers.sort(() => Math.random() - 0.5);
+  question.answerNumber = question.answers.indexOf(answer);
+  return question;
 }
 
 const Game = ({ data, changeScore, changeGameState }) => {
@@ -23,19 +28,18 @@ const Game = ({ data, changeScore, changeGameState }) => {
   }, [data]);
 
   const getUserAnswer = (answer) => {
-    console.log(game.score);
     if (answer !== game?.question?.answerNumber) {
       changeScore(game.score);
       changeGameState(3);
     } else if (game.currentLevel === data.questionCount - 1) {
-      changeScore(data.questionPrices[data.questionCount - (game.currentLevel + 1)]);
+      changeScore(data.questionPrices[game.currentLevel + 1]);
       changeGameState(3);
     }
     else {
       setGame(prev => ({
         ...prev,
         currentLevel: prev.currentLevel + 1,
-        score: data.questionPrices[data.questionCount - (game.currentLevel + 1)],
+        score: data.questionPrices[game.currentLevel + 1],
         question: getRandomQuestion(data.questions[prev.currentLevel + 1]?.list)
       }))
     }

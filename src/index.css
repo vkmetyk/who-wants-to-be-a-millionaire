@@ -160,9 +160,8 @@ code {
 .game__score {
   align-content: center;
   background: #fff;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 10px;
+  display: flex;
+  flex-direction: column-reverse;
   justify-content: space-around;
   justify-items: center;
   overflow: hidden;
@@ -262,14 +261,23 @@ code {
   }
 
   .answer-block {
+    display: flex;
+    flex-direction: column;
     justify-items: center;
+    grid-gap: 0;
+  }
+
+  .answer-block .game__text-container {
+    width: auto;
+    height: 25%;
+    max-width: 100%;
+    padding-bottom: 20px;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .answer-block {
-    grid-template-columns: 1fr;
-    grid-gap: 10px;
+  .answer-block .game__text-container {
+    padding-bottom: 10px;
   }
 }
 
@@ -287,9 +295,10 @@ code {
     font-size: 20px;
   }
 
-  .answer-block {
-    align-content: flex-end;
-    padding: 10px;
+  .answer-block .game__text-container {
+    width: auto;
+    max-width: 100%;
+    padding: 0 15px 15px 15px;
   }
 }
 
