@@ -19,7 +19,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://vkmetyk.github.io/who-wants-to-be-a-millionare",
+  "homepage": "https://vkmetyk.github.io/who-wants-to-be-a-millionaire",
   "eslintConfig": {
     "extends": [
       "react-app",

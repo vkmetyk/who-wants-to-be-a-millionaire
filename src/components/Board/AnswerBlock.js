@@ -1,9 +1,9 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import TextContainer from '../TextContainer';
-import setButtonView from '../../addition-functions/setButtonView';
 
 const AnswerBlock = ({ answers, correctAnswer, setAnswer }) => {
   const [state, setState] = useState(true);
+  const buttons = useRef();
 
   useEffect(() => {
     setState(true);
@@ -16,19 +16,29 @@ const AnswerBlock = ({ answers, correctAnswer, setAnswer }) => {
     if (state) {
       setState(false);
 
-      let answerId = +event.target.parentNode.querySelector('path').dataset.index;
+      const answerId = +event.target.closest('svg').dataset.index;
 
-      setButtonView(event.target.parentNode, correctAnswer === answerId ? 'correct' : 'wrong');
+      if (answerId === correctAnswer) {
+        buttons.current.children[answerId].classList.add('correct');
+      } else {
+        buttons.current.children[answerId].classList.add('wrong');
+        buttons.current.children[correctAnswer].classList.add('correct');
+      }
+
       setTimeout(() => {
-        event.target.parentNode.classList.remove(correctAnswer === answerId ? 'correct' : 'wrong')
-        if (setAnswer)
-          setAnswer(answerId);
-      }, 500);
+        if (answerId === correctAnswer) {
+          buttons.current.children[answerId].classList.remove('correct');
+        } else {
+          buttons.current.children[answerId].classList.remove('wrong');
+          buttons.current.children[correctAnswer].classList.remove('correct');
+        }
+        setAnswer(answerId);
+      }, 1500);
     }
   }
 
   return (
-    <div className="answer-block">
+    <div className="answer-block" ref={buttons}>
       {answers.map((answer, index) =>
         <TextContainer key={index} clickEvent={clickToggle} index={index}>
           <text className="answer-number" textAnchor="middle" x="50" y="45">

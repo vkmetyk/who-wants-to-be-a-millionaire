@@ -11,7 +11,7 @@ const Menu = ({ changeGameState }) => {
       <img
         alt="hand up"
         className="menu__hand"
-        src="/assets/hand.svg"
+        src="/who-wants-to-be-a-millionaire/assets/images/hand.svg"
       />
       <div className="menu__logic">
         <h1 className="menu__text">

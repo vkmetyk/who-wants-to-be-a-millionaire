@@ -10,10 +10,9 @@ function App() {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    fetch('/assets/data.json')
+    fetch('/who-wants-to-be-a-millionaire/assets/data.json')
       .then(response => response.json())
       .then(data => setData(data))
-      // .catch(e => alert('Can not load questions :('));
   }, []);
 
   if (!data)
